@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Интернет магазин</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style> .custom-horizontal-rule {border-top-color: white !important; }
+    .nav-link { color: white !important; } body, html {height: 100%; margin: 0;}
+    .flex-container {display: flex; align-items: flex-start; flex-direction: column; height: 90vh;}
+    .nav-pills {flex: 1;}
+    .nav-item:last-child {margin-top: auto;}
+    .dropdown-menu {bottom: 100%; left: 0; transform: translateY(-0.5rem);}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="row mt-3">
+                <div class="col-1 fixed-top fixed-bottom">
+                    <nav class="navbar navbar-expand flex-column navbar-dark bg-dark">
+                        <div class="container-fluid">
+                            <a class="navbar-brand">
+                                <img src="data/logo1.png" alt="" width="30" height="30"
+                                     class="d-inline-block">
+                                МЕНЮ
+                                <hr class="custom-horizontal-rule">
+                            </a>
+                        </div>
+                        <div class="flex-container">
+                            <ul class="nav nav-pills flex-column navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="orders.html">Заказы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="category.html">Категории</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacts.html">Контакты</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Пользователь
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><a class="dropdown-item" href="#">Профиль</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Выход</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row g-4 g-lg-5">
+                    <div class="col-12 text-center">
+                        <h2>Главная</h2>
+                        <p class="lead">
+                            Вы находитесь на сайте, предназначенном для продажи товаров
+                        </p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card m-3">
+                                        <div class="card-header">
+                                            Товар 1
+                                        </div>
+                                        <img src="data/product.png" class="img-fluid mx-auto" alt="Товар"
+                                             style="width: 200px; height: 200px;">
+                                        <h5 class="card-title">Цена</h5>
+                                        <p class="card-text">Название товара.
+                                            Подробное описание продукта, включая его характеристики, состав,
+                                            размеры, материалы и другие важные детали. Информация о способах
+                                            и стоимости доставки. Правила возврата товара.</p>
+                                        <a href="#" class="btn btn-outline-primary m-3">Купить</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card m-3">
+                                        <div class="card-header">
+                                            Товар 2
+                                        </div>
+                                        <img src="data/product.png" class="img-fluid mx-auto" alt="Товар"
+                                             style="width: 200px; height: 200px;">
+                                        <h5 class="card-title">Цена</h5>
+                                        <p class="card-text">Название товара.
+                                            Подробное описание продукта, включая его характеристики, состав,
+                                            размеры, материалы и другие важные детали. Информация о способах
+                                            и стоимости доставки. Правила возврата товара.</p>
+                                        <a href="#" class="btn btn-outline-primary m-3">Купить</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card m-4">
+                                        <div class="card-header">
+                                            Товар 3
+                                        </div>
+                                        <img src="data/product.png" class="img-fluid mx-auto" alt="Товар"
+                                             style="width: 200px; height: 200px;">
+                                        <h5 class="card-title">Цена</h5>
+                                        <p class="card-text">Название товара.
+                                            Подробное описание продукта, включая его характеристики, состав,
+                                            размеры, материалы и другие важные детали. Информация о способах
+                                            и стоимости доставки. Правила возврата товара.</p>
+                                        <a href="#" class="btn btn-outline-primary m-3">Купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+    </div>
+</div>
+                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
