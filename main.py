@@ -1,25 +1,51 @@
 # Импорт встроенной библиотеки для работы веб-сервера
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-
 # Для начала определим настройки запуска
-hostName = "localhost" # Адрес для доступа по сети
-serverPort = 8080 # Порт для доступа по сети
+hostName = "localhost"  # Адрес для доступа по сети
+serverPort = 8080  # Порт для доступа по сети
+
 
 class MyServer(BaseHTTPRequestHandler):
     """
-        Специальный класс, который отвечает за
-        обработку входящих запросов от клиентов
+    Специальный класс, который отвечает за
+    обработку входящих запросов от клиентов
     """
+
     def do_GET(self):
-        """ Метод для обработки входящих GET-запросов """
+        """Основной метод для обработки входящих GET-запросов"""
+
+        if self.path == "/css/bootstrap.min.css":
+            self.do_GET_CSS()
+        else:
+            self.do_GET_HTML()
+
+
+    def do_GET_CSS(self):
+        """Метод для обработки входящих GET-запросов стилей"""
+        with open("css/bootstrap.min.css", "rb") as file:
+            page_content = file.read()
+
+        self.send_response(200)  # Отправка кода ответа
+        self.send_header(
+            "Content-type", "text/css"
+        )  # Отправка типа данных, который будет передаваться
+        self.end_headers()  # Завершение формирования заголовков ответа
+        self.wfile.write(page_content)  # Тело ответа
+
+
+    def do_GET_HTML(self):
+        """Метод для обработки остальных страниц"""
         with open("contacts.html", "rb") as file:
             page_content = file.read()
 
-        self.send_response(200) # Отправка кода ответа
-        self.send_header("Content-type", "text/html") # Отправка типа данных, который будет передаваться
-        self.end_headers() # Завершение формирования заголовков ответа
-        self.wfile.write(page_content) # Тело ответа
+        self.send_response(200)  # Отправка кода ответа
+        self.send_header(
+            "Content-type", "text/html"
+        )  # Отправка типа данных, который будет передаваться
+        self.end_headers()  # Завершение формирования заголовков ответа
+        self.wfile.write(page_content)  # Тело ответа
+
 
 if __name__ == "__main__":
     # Инициализация веб-сервера, который будет по заданным параметрах в сети
